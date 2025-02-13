@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scramble Game</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body >
+	<div align="center">
+    <header >
+		<div class="top-bar">
+        <div class="logo_text">SCRAMBLE </div>
+		</div>
+    </header>
+    <main>
+        <section class="game-area">
+		<div class="card rounded border border-5 border-warning game_card" >
+			<div class="clock">Clock: &nbsp;<span id="clock-val" ></span></div>
+			<!-- SCORE BOARD -->
+			<div class="score-board">
+				<h3>SCORE BOARD</h3>
+                <table class="table-style-1">
+					<tbody>
+					<tr id="score-table-user" class="table-header"></tr>
+					<tr id="score-table-score" class="table-body"></tr>
+					</tbody>
+                </table>
+            </div>
+			<br/>
+		
+		<h3>Pool of letters &amp; Words</h3>
+            <div class="letter_words">
+                <table id="letter_words" class="table-style-1">
+                    <thead class="table-header">
+                        <tr>
+                            <td>Letters</td>
+                            <td>Words</td>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+					     <tr>
+                            <td id="letters"></td>
+                            <td id="words"></td>
+                        </tr>
+                    </tbody>
+                </table>	
+            </div>
+			</div>
+
+			<!-- POST/MAKE WORD -->
+            <div class="form-container card rounded border border-5 border-warning game_card">
+				<div class="selected">Letters chosen[Pminus]: <span id="pminus"></span></div>
+				<div class="selected">Words chosen[Wminus]: <span id="wminus"></span></div>
+                <form id="word-form">
+                    <input type="text" id="Wplus">
+                    <input type="hidden" id="player-id">
+					<input type="hidden" id="Pminus">
+					<input type="hidden" id="Wminus">
+					
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+			
+			<!-- HISTORY -->
+			<div class="card rounded border border-5 border-warning game_card" >
+            <div id="word-history">
+                <h2>Word History</h2>
+                    <table id="game-history-table"  class="table-style-1">
+                    <thead class="table-header">
+                        <tr>
+                            <th>User</th>
+                            <th>Score</th>
+						    <th>P minus</th>
+                            <th>W minus</th>
+							<th>W Plus</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hist-data" class="table-body">
+                    </tbody>
+                </table>
+            </div>
+			</div>
+			
+        </section>
+    </main>
+    <script src="Static?script.js"></script>
+	</div>
+</body>
+</html>
